@@ -42,6 +42,19 @@ namespace GameCreator.Runtime.UniqueGameObjects
         }
 
         /// <summary>
+        ///     Retrieves a GameObject by its string identifier hash.
+        /// </summary>
+        /// <param name="hash">The string identifier of the GameObject.</param>
+        /// <returns>The associated GameObject, or null if not found.</returns>
+        /// <remarks>
+        ///     The GameObject must have an InstanceGuid component to be retrievable.
+        /// </remarks>
+        public GameObject GetByID(int hash)
+        {
+            return ReferencedInstanceGuids.GetValueOrDefault(hash);
+        }
+
+        /// <summary>
         ///     Registers an InstanceGuid and its associated GameObject.
         /// </summary>
         /// <param name="instanceGuid">The InstanceGuid to register.</param>
