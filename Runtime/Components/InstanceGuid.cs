@@ -21,5 +21,12 @@ namespace GameCreator.Runtime.UniqueGameObjects
         {
             UniqueGameObjectsManager.UnregisterInstanceGuid(this);
         }
+
+        public void SetGuid(IdString newIdString)
+        {
+            UniqueGameObjectsManager.UnregisterInstanceGuid(this);
+            _guid.Set = newIdString;
+            UniqueGameObjectsManager.RegisterInstanceGuid(this);
+        }
     }
 }
