@@ -1,0 +1,20 @@
+{
+  "name": "GameCreator.Editor.UniqueGameObjects",
+  "rootNamespace": "GameCreator.Editor.UniqueGameObjects",
+  "references": [
+    "GameCreator.Runtime.Core",
+    "GameCreator.Editor.Core",
+    "GameCreator.Runtime.UniqueGameObjects"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
