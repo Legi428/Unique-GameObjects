@@ -1,6 +1,8 @@
 using GameCreator.Runtime.Common;
 using System;
+using System.Linq;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace GameCreator.Runtime.UniqueGameObjects
 {
@@ -18,7 +20,15 @@ namespace GameCreator.Runtime.UniqueGameObjects
 
         public override string String => $"Game Object ID: {_id}";
 
-        public override GameObject EditorValue => GetObject(Args.EMPTY);
+        public override GameObject EditorValue
+        {
+            get
+            {
+                var id = _id.Get(Args.EMPTY);
+                var list = Object.FindObjectsByType<InstanceGuid>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+                return list.FirstOrDefault(x => x.GuidIdString.String == id)?.gameObject;
+            }
+        }
 
         public override GameObject Get(Args args)
         {

@@ -1,6 +1,6 @@
 {
   "name": "com.legi.unique_game_objects",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "displayName": "Unique Game Objects",
   "description": "Using Game Creator 2, adds a new component giving a GameObject a unique ID as well as a Getter to get GameObject's by ID or get their Unique ID.",
   "changelogUrl": "https://github.com/Legi428/Unique-GameObjects/blob/master/CHANGELOG.md",

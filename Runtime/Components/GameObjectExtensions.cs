@@ -19,11 +19,7 @@ namespace GameCreator.Runtime.UniqueGameObjects
         /// </remarks>
         public static string GetUniqueID(this GameObject gameObject)
         {
-            if (gameObject.Get<InstanceGuid>() is { } instanceGuid)
-            {
-                return instanceGuid.GuidIdString.String;
-            }
-            return string.Empty;
+            return gameObject.Get<InstanceGuid>()?.GuidIdString.String ?? string.Empty;
         }
     }
 }

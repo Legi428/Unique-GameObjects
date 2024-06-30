@@ -1,4 +1,14 @@
-﻿## [1.1.0] - 2024-06-28
+﻿## [1.1.1] - 2024-06-30
+
+### Changed
+
+- Add documentation to `InstanceGuid.SetGuid`.
+
+### Fixed
+
+- (Editor) Fix exception when trying to fetch the variables of Local Variables on a unique GameObject by ID.
+
+## [1.1.0] - 2024-06-28
 
 ### Added
 
