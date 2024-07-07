@@ -1,4 +1,11 @@
-﻿## [1.1.1] - 2024-06-30
+﻿## [1.1.2] - 2024-07-07
+
+### Changed
+
+- Hide the `Empty Guid Error` when the selected GameObject is a prefab.
+- Adjust some titles so they better fit into Game Creator 2.
+
+## [1.1.1] - 2024-06-30
 
 ### Changed
 

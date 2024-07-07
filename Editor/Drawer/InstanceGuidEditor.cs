@@ -82,6 +82,7 @@ namespace GameCreator.Editor.UniqueGameObject
         {
             serializedObject.Update();
             _duplicateErrorContainer.style.display = DisplayStyle.None;
+            _emptyGuidError.style.display = DisplayStyle.None;
             var guidProperty = serializedObject.FindProperty("_guid");
 
             if (PrefabUtility.IsPartOfPrefabAsset(target)) return;

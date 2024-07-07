@@ -18,7 +18,7 @@ namespace GameCreator.Runtime.UniqueGameObjects
 
         public static PropertyGetGameObject Create => new(new GetGameObjectByID());
 
-        public override string String => $"Game Object ID: {_id}";
+        public override string String => $"Game Object with ID: {_id}";
 
         public override GameObject EditorValue
         {
