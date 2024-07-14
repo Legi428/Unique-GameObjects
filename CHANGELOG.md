@@ -3,6 +3,7 @@
 ### Added
 
 - Add icon for `InstanceGuid`.
+- Add dedicated settings paged showing all InstanceGuid GameObjects in the scene.
 
 ## [1.1.2] - 2024-07-07
 
