@@ -39,7 +39,7 @@ namespace GameCreator.Runtime.UniqueGameObjects
         {
             var id = _id.Get(args);
 
-            return UniqueGameObjectsManager.Instance.GetByID(id);
+            return UniqueGameObjectsManager.GetByID(id);
         }
     }
 }

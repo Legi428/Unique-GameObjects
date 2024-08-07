@@ -4,15 +4,14 @@ using UnityEngine;
 
 namespace GameCreator.Runtime.UniqueGameObjects
 {
-    [AddComponentMenu("")]
-    public class UniqueGameObjectsManager : Singleton<UniqueGameObjectsManager>
+    public static class UniqueGameObjectsManager
     {
         readonly static Dictionary<int, GameObject> ReferencedInstanceGuids = new();
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void OnSubsystemsInit()
         {
-            Instance.WakeUp();
+            ReferencedInstanceGuids.Clear();
         }
 
         /// <summary>
@@ -23,7 +22,7 @@ namespace GameCreator.Runtime.UniqueGameObjects
         /// <remarks>
         ///     The GameObject must have an InstanceGuid component to be retrievable.
         /// </remarks>
-        public GameObject GetByID(IdString idString)
+        public static GameObject GetByID(IdString idString)
         {
             return ReferencedInstanceGuids.GetValueOrDefault(idString.Hash);
         }
@@ -36,7 +35,7 @@ namespace GameCreator.Runtime.UniqueGameObjects
         /// <remarks>
         ///     The GameObject must have an InstanceGuid component to be retrievable.
         /// </remarks>
-        public GameObject GetByID(string idString)
+        public static GameObject GetByID(string idString)
         {
             return ReferencedInstanceGuids.GetValueOrDefault(idString.GetHashCode());
         }
@@ -49,7 +48,7 @@ namespace GameCreator.Runtime.UniqueGameObjects
         /// <remarks>
         ///     The GameObject must have an InstanceGuid component to be retrievable.
         /// </remarks>
-        public GameObject GetByID(int hash)
+        public static GameObject GetByID(int hash)
         {
             return ReferencedInstanceGuids.GetValueOrDefault(hash);
         }

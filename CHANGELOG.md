@@ -1,4 +1,14 @@
-﻿## [1.2.0] - 2024-07-15
+﻿## [1.3.0] - 2024-08-08
+
+### Changed
+
+- Make UniqueGameObjectsManager a static class. This introduces API changes.
+
+### Fixed
+
+- Fix a bug that causes unique GameObjects to be stored as null.
+
+## [1.2.0] - 2024-07-15
 
 ### Added
 
